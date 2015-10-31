@@ -1,0 +1,7 @@
+This is target for chrome browser but is compatible with Firefox, Safari, and recent releases of IE/EDGE.
+Included libraries are intended to act as poly support only.
+
+Code is organized in CommonJS module form.
+
+TODO:
+Unit tests need a test runner or suite.

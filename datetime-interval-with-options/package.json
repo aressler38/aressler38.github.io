@@ -1,0 +1,19 @@
+{
+  "name": "date-time-interval-with-options",
+  "version": "0.0.1",
+  "description": "A coding excercise",
+  "author": {
+    "name": "Alexander Ressler",
+    "email": "alexander.ressler@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^12.0.1"
+  },
+	"scripts" : {
+
+		"clean" : "rm -rf dist && mkdir dist && mkdir dist/js",
+		"dist" : "npm run-script clean && cp -r src/css src/index.html dist/ && node_modules/browserify/bin/cmd.js src/js/*.js -o dist/js/main.js"
+
+	}
+}
