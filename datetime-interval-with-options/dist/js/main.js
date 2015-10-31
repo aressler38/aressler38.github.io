@@ -69,7 +69,6 @@ module.exports = new function () {
 	 * @this to or from object in the elements object
 	 */
 	function setTimeElements (date) {
-		console.log('setting time on ', this, date);
 		this.date.value = date.toISOString().match(rDate)[0];
 		this.time.value = date.toISOString().match(rTime)[0];
 		update.call(self);
