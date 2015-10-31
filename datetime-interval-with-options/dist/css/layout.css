@@ -1,0 +1,39 @@
+html {
+	font-family: monospace, Monaco;
+	font-size: 24px;
+}
+body {
+	height: 100%;
+	margin:0;
+	padding: 30px;
+}
+
+
+label {
+	margin-left: 10px;
+}
+label::after,
+label::before
+{
+	content: "";
+	margin:0.175em;
+}
+
+input  {
+	margin: 0 10px;
+}
+
+
+li {
+	list-style: none;
+	border: 1px solid transparent;
+	transition: all 0.7s;
+}
+
+.selected {
+	background: darkorange;
+}
+
+.row {
+	margin: 2em;
+}

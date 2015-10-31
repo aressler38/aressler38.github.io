@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Datetime Interval with Options</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	
+	<main>
+		<div class="row">
+			<label for="from-date">From</label>
+			<input type="date" id="from-date" />
+			<input type="time" id="from-time" />
+
+			<label for="to-date">To</label>
+			<input type="date" id="to-date" />
+			<input type="time" id="to-time" />
+		</div>
+		
+		<div id="time-display" class="row"><!-- (Example) Time Interval: 7 days 2 hours 15 minutes --></div>
+
+		<div class="row">
+			<h1>Options</h1>
+			<ul id="options">
+				<li>Option 1</li>
+				<li>Option 2</li>
+				<li>Option 3</li>
+				<li>Option 4</li>
+				<li>Option 5</li>
+			</ul>
+		</div>
+	</main>
+
+
+	<!-- Polyfill support -->
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+	<script>
+		webshims.setOptions('waitReady', false);
+		webshims.setOptions('forms-ext', {types: 'date'});
+		webshims.polyfill('forms forms-ext');
+	</script>
+
+	<!-- Main Applicaiton -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
