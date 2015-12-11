@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+	<title>scrollview test</title>
+
+
+	<link rel="stylesheet" href="scrollview.css" />
+
+	<style>
+		.controlls.hidden {
+			left: 0;
+			top: -500px;
+		}
+		.controlls {
+			transition: top 0.2s ease-out;
+			display: block;
+			top: 0;
+			left: 0;
+			padding: 0;
+			position: fixed;
+			background: rgba(10,10,10,0.4);
+			z-index: 2;
+		}
+		.controlls > * {
+			display: inline-block;
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+			box-shadow: 0px 0px 1px 1px black;
+			width: 32%;
+		}
+		#controll-toggle {
+			position: absolute;
+			display:inline-block;
+			margin:0;
+			padding:0;
+			top:0;
+			right:0;
+			z-index: 10;
+			font-size: 32px;
+			width:32px;
+			height:32px;
+			transition: transform 0.15s ease-out;
+			transform: rotateZ(90deg);
+			line-height:32px;
+			vertical-align: middle;
+			text-align:center;
+			background-image: url(nuclear.gif);
+			background-size: 32px 32px;
+			background-repeat: no-repeat;
+		}
+		#controll-toggle.active {
+			transform: rotateZ(0deg);
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="controll-toggle" class=""></div>
+
+	<div class="controlls hidden">
+		<label for="height">Height (px)</label>
+		<input id="height" type="number" />
+		<button id="set-height">Set</button>
+	</div>
+
+	<div id="test-box"></div>
+	<script src="test.bundle.js"></script>
+</body>
+</html>

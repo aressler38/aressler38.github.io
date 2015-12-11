@@ -1,0 +1,16 @@
+{
+  "name": "scrollview",
+  "author": "aressler38",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "jshint": "^2.8.0"
+  },
+  "scripts": {
+    "clean": "touch build; rm -rf build; mkdir build;",
+    "build-test": "node_modules/browserify/bin/cmd.js test/*test.js src/js/*.js -o test/test.bundle.js && cp src/css/* test/",
+    "build": "npm run-script clean && node_modules/browserify/bin/cmd.js src/js/*.js -o build/scrollview.js && npm run-script build-test",
+    "watch": "while inotifywait -e access -e modify -r src/js; do npm run-script build; done",
+		"hint" : "node_modules/jshint/bin/jshint"
+  }
+}
