@@ -1,5 +1,3 @@
 node_modules
 build
 *.swp
-test/test.bundle.js
-test/scrollview.css
