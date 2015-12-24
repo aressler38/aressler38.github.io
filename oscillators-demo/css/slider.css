@@ -1,0 +1,11 @@
+.control-slider {
+    position: relative;
+}
+.control-setting,
+.slider-value {
+    display:inline-block;
+    max-width: 10ex;
+}
+.control-slider .details > div {
+    min-width: 24ex;
+}

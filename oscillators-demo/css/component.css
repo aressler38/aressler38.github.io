@@ -1,0 +1,75 @@
+.component {
+    background: rgba(0, 255, 255, 0.05);
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 2px 2px grey, 
+        inset 0px 0px 2px grey, 
+        inset 0px 0px 1px black;
+    position: absolute;
+    transform: translate3d(0px, 0px, 0px);
+    transform-origin: 50% 50% 0;
+    transition: background 0.309s;
+    z-index: 1;
+}
+.component:active {
+    cursor: move;
+}
+.component .in, .component .out {
+    position: absolute;
+    box-shadow: 2px 2px 2px grey, 
+        inset 0px 0px 2px grey, 
+        inset 0px 0px 1px black;
+    display: inline-block;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: ghostwhite;
+    top: calc(50% - 12px);
+    transition: all 0.309s;
+    z-index:2;
+}
+.component .in {
+    left: -12px;
+}
+.component .out {
+    right: -12px;
+}
+
+.component .in:hover, 
+.component .out:hover,
+.component .in:active, 
+.component .out:active {
+    background: lightgrey;
+    box-shadow: 2px 2px 2px grey, 
+        0px 0px 1px 3px orange,
+        inset 0px 0px 2px grey, 
+        inset 0px 0px 1px black;
+}
+
+.component:hover {
+    background: peachpuff;
+}
+
+/* SPECIAL COMPONENT TYPE RULES */
+.component.oscillator .in { display: none; }
+.component.destination .out { display: none; }
+.component.destination:after {
+    position: absolute;
+    top: 8px;
+    right: -16px;
+    width: 0px; height: 10px;
+    border-top: 12px solid transparent; 
+    border-bottom: 12px solid transparent;
+    border-right: 16px solid black;
+    content: " ";
+}
+
+
+.component.selected {
+    background: yellow;
+}
+.component.selected:hover {
+    background: yellow;
+}
